@@ -1,0 +1,72 @@
+.saved-cities-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: #f9f9f9;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.city-list {
+  list-style: none;
+  padding: 0;
+}
+
+.city-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  margin-bottom: 0.75rem;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.city-item:hover {
+  background: #eef6ff;
+}
+
+.city-info h2 {
+  margin: 0;
+  color: #0077cc;
+}
+
+.city-actions button {
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-left: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.view-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.view-btn:hover {
+  background-color: #45a049;
+}
+
+.remove-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.remove-btn:hover {
+  background-color: #e53935;
+}
+
+.no-cities {
+  text-align: center;
+  color: #777;
+  font-style: italic;
+}

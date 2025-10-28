@@ -1,0 +1,16 @@
+<div class="container mt-5">
+  <h2>🌤️ Weather Finder</h2>
+  <form (ngSubmit)="getWeather()" class="mb-3">
+    <input type="text" [(ngModel)]="cityName" name="cityName" class="form-control" placeholder="Enter city name" required>
+    <button type="submit" class="btn btn-primary mt-2">Search</button>
+  </form>
+
+  <div *ngIf="weatherData" class="card p-3 mt-3">
+    <h4>{{ weatherData.location.name }}</h4>
+    <p>Temperature: {{ weatherData.current.temperature }}°C</p>
+    <p>{{ weatherData.current.weather_descriptions[0] }}</p>
+    <button (click)="saveCity()" class="btn btn-success">Save City</button>
+  </div>
+
+  <div *ngIf="errorMsg" class="alert alert-danger mt-3">{{ errorMsg }}</div>
+</div>

@@ -1,0 +1,20 @@
+<div class="saved-cities-container">
+  <h1>Saved Cities</h1>
+
+  <div *ngIf="cities.length === 0" class="no-cities">
+    <p>No saved cities yet.</p>
+  </div>
+
+  <ul *ngIf="cities.length > 0" class="city-list">
+    <li *ngFor="let city of cities" class="city-item">
+      <div class="city-info">
+        <h2>{{ city.name }}</h2>
+        <p *ngIf="city.temperature">Temperature: {{ city.temperature }}°C</p>
+        <p *ngIf="city.country">Country: {{ city.country }}</p>
+      </div>
+      <div class="city-actions">
+        <button class="remove-btn" (click)="removeCity(city.name)">Remove</button>
+      </div>
+    </li>
+  </ul>
+</div>
